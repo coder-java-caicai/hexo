@@ -1,19 +1,26 @@
-<code class="language-yum hljs http">
 language: node_js
-node_js: 
-   - 4.4
- 
-# S: Build Lifecycle
+
+node_js:
+- '4.1'
+
 install:
-  - npm install -g npm
-  - npm update
- 
+   - npm install hexo-cli -g
+   - npm install
+
+script:
+   - hexo -version
+   - hexo clean
+   - hexo g
+   - hexo deploy
  
 before_script:
   - npm install -g gulp
  
 script:
+  - hexo -version
+  - hexo clean
   - hexo g
+  - hexo deploy
  
 after_script:
   - cd ./public
@@ -31,5 +38,4 @@ branches:
 env:
  global:
    - GH_REF: git@github.com:coder-caicai/coder-caicai.github.io.git
- </code>
 
