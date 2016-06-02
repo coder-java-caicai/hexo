@@ -1,6 +1,7 @@
 <code class="language-yum hljs http">
 language: node_js
-node_js: stable
+node_js: 
+   - 4.4
  
 # S: Build Lifecycle
 install:
