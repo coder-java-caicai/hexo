@@ -5,6 +5,7 @@ node_js: stable
 # S: Build Lifecycle
 install:
   - npm install -g npm
+  - npm update
  
  
 before_script:
